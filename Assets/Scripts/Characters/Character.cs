@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+namespace BGS.Task
 {
-    protected virtual void Start()
+    public class Character : MonoBehaviour
     {
+        protected virtual void Start()
+        {
         
+        }
+
+        protected virtual void Update()
+        {
+        
+        }
     }
 
-    protected virtual void Update()
-    {
-        
-    }
 }

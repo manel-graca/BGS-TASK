@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace BGS.Task
 {
-    [CreateAssetMenu(fileName = "New Currency", menuName = "BGS/Currency")]
-    public class Currency : Item
+    [CreateAssetMenu(fileName = "Gold", menuName = "BGS/Gold")]
+    public class Gold : Item
     {
+        
         protected override void OnEnable()
         {
             base.OnEnable();

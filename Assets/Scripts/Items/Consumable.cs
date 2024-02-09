@@ -8,6 +8,9 @@ namespace BGS.Task
 
     public class Consumable : Item
     {
+        [SerializeField] private EConsumableType consumableType;
+        public EConsumableType ConsumableType => consumableType;
+        
         protected override void OnEnable()
         {
             base.OnEnable();

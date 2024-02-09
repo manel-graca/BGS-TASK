@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Clothing : MonoBehaviour
+namespace BGS.Task
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(fileName = "New Clothing", menuName = "BGS/Clothing")]
+    public class Clothing : Item
     {
+        [SerializeField] private EBodyPart clothingBodyPart;
+        public EBodyPart ClothingBodyPart => clothingBodyPart;
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
+        [SerializeField] private Sprite clothingSprite;
+        public Sprite ClothingSprite => clothingSprite;
+        
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+        }
     }
 }
+

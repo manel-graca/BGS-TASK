@@ -12,13 +12,23 @@ namespace BGS.Task
         [SerializeField] protected string displayName; 
         public string DisplayName => displayName;
         
-        [SerializeField] protected Enums.EItemType type;
-        public Enums.EItemType Type => type;
+        [SerializeField] protected EItemType type;
+        public EItemType Type => type;
         
         [SerializeField] private Sprite icon;
         public Sprite Icon => icon;
+
         
-    
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                id = Guid.NewGuid().ToString();
+            }
+        }
+#endif
+
         protected virtual void OnEnable()
         {
             

@@ -132,6 +132,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1303306537}
+  - component: {fileID: 1303306540}
+  - component: {fileID: 1303306539}
+  - component: {fileID: 1303306538}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -156,6 +159,92 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1303306538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303306536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4a3e2c61101b643864c6aec2fbcc36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerClothingData:
+  - bodyPart: 2
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728253508961812}
+  - bodyPart: 1
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728247791527388}
+  - bodyPart: 8
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728248335434678}
+  - bodyPart: 7
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728250389809452}
+  - bodyPart: 6
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728247973481736}
+  - bodyPart: 5
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728253659112414}
+  - bodyPart: 12
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728248063443982}
+  - bodyPart: 11
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728250203290968}
+  - bodyPart: 10
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728246530068232}
+  - bodyPart: 9
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728248473373692}
+  - bodyPart: 3
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728246395388866}
+  - bodyPart: 14
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728247177983428}
+  - bodyPart: 13
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728252980539666}
+  - bodyPart: 16
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728250347717834}
+  - bodyPart: 15
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728247161678170}
+  - bodyPart: 4
+    clothing: {fileID: 0}
+    renderer: {fileID: 7622728250519566198}
+  dressableBodyParts: 
+--- !u!114 &1303306539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303306536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552d6134a88b1e7438c914194321bf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1303306540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303306536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d922521ff35f944468e03858ff206cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1432402260
 GameObject:
   m_ObjectHideFlags: 0
