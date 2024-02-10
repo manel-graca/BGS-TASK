@@ -7,25 +7,18 @@ namespace BGS.Task
 {
     public class PlayerClothing : Player
     {
-        [Serializable]
-        public class PlayerClothingData
-        {
-            [SerializeField] internal EBodyPart bodyPart;
-            [SerializeField] internal Clothing clothing;
-            [SerializeField] internal SpriteRenderer renderer;
-            [SerializeField] internal Sprite defaultSprite;
-        }
+        [SerializeField] private Outfit currentOutfit;
         
-        [SerializeField] private List<PlayerClothingData> playerClothingData = new();
+        [SerializeField] private List<CharacterOutfitData> currentOutfitData = new();
 
         private void OnValidate()
         {
-            foreach (var k in playerClothingData)
+            foreach (var k in currentOutfitData)
             {
                 if (k.defaultSprite == null && k.renderer.sprite != null)
                 {
                     k.defaultSprite = k.renderer.sprite;
-                }
+                } 
             }
         }
 
@@ -42,7 +35,7 @@ namespace BGS.Task
 
         private void UpdateRenderers()
         {
-            foreach(var k in playerClothingData)
+            foreach(var k in currentOutfitData)
             {
                 k.renderer.sprite = k.clothing == null ? k.defaultSprite : k.clothing.ClothingSprite;
             }

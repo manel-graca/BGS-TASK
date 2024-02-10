@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BGS.Task
 {
-    [CreateAssetMenu(fileName = "New Clothing", menuName = "BGS/Clothing")]
+    [CreateAssetMenu(fileName = "New Clothing", menuName = "BGS/Clothing/Clothing Piece")]
     public class Clothing : Item
     {
         [SerializeField] private EBodyPart clothingBodyPart;

@@ -16,5 +16,12 @@ MonoBehaviour:
   displayName: Red Hood
   type: 1
   icon: {fileID: 21300000, guid: 20eb058aea3c3a744bb5d47a1610550a, type: 3}
+  baseValue: 50
+  sellRatio: 0.2
+  demandFactor: 1
+  supplyFactor: 2
+  utilityFactor: 1
+  buyPrice: 25
+  sellPrice: 5
   clothingBodyPart: 1
   clothingSprite: {fileID: 21300000, guid: 20eb058aea3c3a744bb5d47a1610550a, type: 3}

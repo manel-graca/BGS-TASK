@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25ed9a31a8c32041ad09004bcf78fa7, type: 3}
+  m_Name: Player Runtime Data
+  m_EditorClassIdentifier: 
+  Stamina: 0
+  Gold: 0
+  OutfitData: []
+  CurrentOutfit: {fileID: 0}
