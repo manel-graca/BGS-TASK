@@ -9,8 +9,6 @@ namespace BGS.Task
     public class Shopkeeper : Character, IInteractable
     {
         [SerializeField] private UIFadeCanvasGroupTween welcomeScreen;
-        [SerializeField] private Button openShopButton;
-        [SerializeField] private Button closeButton;
         
         [SerializeField] private ShopData shop;
         

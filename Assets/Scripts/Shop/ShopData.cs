@@ -17,6 +17,8 @@ namespace BGS.Task
         [SerializeField][TextArea(2,4)] protected string shopWelcomeMessage; 
         public string ShopWelcomeMessage => shopWelcomeMessage;
         
+        public string ShopTypeString => type.ToString().Replace("_", " ");
+        
         [SerializeField] protected EShopType type;
         public EShopType Type => type;
         

@@ -15,4 +15,5 @@ MonoBehaviour:
   Stamina: 0
   Gold: 0
   OutfitData: []
-  CurrentOutfit: {fileID: 0}
+  CurrentOutfit: {fileID: 11400000, guid: 0d89901793fef8e4badaeae89be01bab, type: 2}
+  CurrentDirection: {x: 0, y: -1}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30af3a7584a19eb43ac6fea25b622890, type: 3}
+  m_Name: Calvin Cloud
+  m_EditorClassIdentifier: 
+  id: b59f245d-e5a1-42ba-81d6-063bcebf009c
+  shopName: Calvin Cloud
+  shopWelcomeMessage: Welcome to Calvin Cloud! Here you will find very fancy clothing.
+  type: 3
+  listedItems:
+  - {fileID: 11400000, guid: 0463782e72b9bf94a8a2d204331809c6, type: 2}
+  - {fileID: 11400000, guid: 531c67ea33829524ba43cc4d977b862f, type: 2}
+  - {fileID: 11400000, guid: 0d89901793fef8e4badaeae89be01bab, type: 2}
+  shopPrefab: {fileID: 4251833528246096933, guid: b1240128136184c4687cde9305be35b0, type: 3}

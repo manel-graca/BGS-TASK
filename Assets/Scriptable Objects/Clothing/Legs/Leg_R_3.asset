@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a949aabd3d563d6408bbc1945176cb66, type: 3}
+  m_Name: Leg_R_3
+  m_EditorClassIdentifier: 
+  id: b4a1beee-f3d7-491d-ab1b-f408901619f4
+  displayName: Leg 3
+  description: 
+  type: 1
+  icon: {fileID: 21300000, guid: 3630e6dc5665edb4ab4a3c3487f6b978, type: 3}
+  tradable: 1
+  baseValue: 8
+  sellRatio: 0.75
+  demandFactor: 1
+  supplyFactor: 1
+  utilityFactor: 1
+  buyPrice: 8
+  sellPrice: 6
+  clothingBodyPart: 15
+  clothingSprite: {fileID: 21300000, guid: 3630e6dc5665edb4ab4a3c3487f6b978, type: 3}

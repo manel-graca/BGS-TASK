@@ -19,8 +19,6 @@ MonoBehaviour:
   type: 0
   listedItems:
   - {fileID: 11400000, guid: 1475f3e3711fb3441abfd55ddbdb4f82, type: 2}
-  - {fileID: 11400000, guid: 1775778e3b845144898ce7b4bf06085d, type: 2}
   - {fileID: 11400000, guid: 8e50b83c66942644e9e15a17b49583c7, type: 2}
-  - {fileID: 11400000, guid: 913e331bccd5fa54e95f488dc56c2511, type: 2}
   - {fileID: 11400000, guid: 55e29326bc8972a49bef0ada6d9cf78d, type: 2}
-  shopPrefab: {fileID: 3026689993228295029, guid: 1ff4711b94505014ebd5c30b936368b5, type: 3}
+  shopPrefab: {fileID: 359345359691493340, guid: 88ca45262fbe6024483234b08ce3ea39, type: 3}

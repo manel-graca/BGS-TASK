@@ -22,11 +22,6 @@ namespace BGS.Task
             imageTween.Show(value, immediate);
         }
 
-        public void OnClick()
-        {
-            shop.HandleHighlight(this);
-        }
-        
         public void Setup(Item item, Shop shop, bool highlight)
         {
             this.item = item;

@@ -8,18 +8,6 @@ namespace BGS.Task
 {
     public class PlayerMovement : Player
     {
-        [Header("Dash")]
-        [SerializeField] private KeyCode dashKey;
-        [SerializeField] private float dashSpeed = 150f;
-        [SerializeField] private float dashDuration = 0.2f;
-        [SerializeField] private List<TrailRenderer> dashTrails = new();
-
-        [Header("Stamina")]
-        [SerializeField] private float maxStamina = 20f;
-        [SerializeField][Range(0,1)] private float staminaDrainRate = 0.5f;
-        [SerializeField][Range(0,2)] private float staminaRegenRate = 0.5f;
-        [SerializeField][Range(0,1)] private float staminaRegenDelay = 0.5f;
-        
         [Header("Walk")]
         [SerializeField] private float walkSpeed;
 
@@ -65,15 +53,10 @@ namespace BGS.Task
             var isWalking = input != Vector2.zero;
             var isSprinting = Input.GetKey(sprintKey);
             
-            if (Input.GetKeyDown(dashKey) && !isDashing)
-            {
-                StartCoroutine(Dash());
-            }
             
             if (isSprinting)
             {
                 sprintSpeed = walkSpeed * sprintMultiplier;
-                runtimeData.Stamina -= staminaDrainRate * Time.deltaTime;
                 timeSinceStoppedSprinting = 0;
             }
 
@@ -82,7 +65,6 @@ namespace BGS.Task
             animator.SetBool(Walking, isWalking);
             animator.SetBool(Sprinting, isSprinting);
             
-            runtimeData.Stamina += timeSinceStoppedSprinting > staminaRegenDelay ? staminaRegenRate * Time.deltaTime : 0;
             
             timeSinceStoppedSprinting += Time.deltaTime;
         }
@@ -90,38 +72,13 @@ namespace BGS.Task
         private void FixedUpdate()
         {
             if (isDashing) return;
+            
             var normalizedInput = input.normalized;
-            rb.velocity = new Vector2(normalizedInput.x, normalizedInput.y) *
-                          (!Input.GetKey(sprintKey) ? walkSpeed : sprintSpeed) * Time.fixedDeltaTime;
+            rb.velocity = normalizedInput.magnitude != 0 ? (new Vector2(normalizedInput.x, normalizedInput.y) *
+                          (!Input.GetKey(sprintKey) ? walkSpeed : sprintSpeed) * Time.fixedDeltaTime) : Vector2.zero;
             runtimeData.CurrentDirection = input;
             graphicsTransform.localScale = new Vector3(input.x < 0 ? -1 : 1, 1, 1);
         }
 
-        private IEnumerator Dash()
-        {
-            isDashing = true;
-            float dashStartTime = Time.time;
-            foreach (var dt in dashTrails)
-            {
-                dt.gameObject.SetActive(true);
-            }
-
-            while (Time.time - dashStartTime < dashDuration)
-            {
-                rb.velocity = input.normalized * dashSpeed * Time.fixedDeltaTime;
-                yield return null;
-            }
-
-            rb.velocity = Vector2.zero;
-            isDashing = false;
-            if (dashTrails.Count > 0)
-            {
-                yield return new WaitForSeconds(dashTrails[0].time);
-                foreach (var dt in dashTrails)
-                {
-                    dt.gameObject.SetActive(false);
-                }
-            }
-        }
     }
 }

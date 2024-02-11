@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ namespace BGS.Task
     {
         private static GameManager instance;
         public static GameManager Instance => instance;
+        
+        [SerializeField] private Wardrobe wardrobe;
 
         private void Awake()
         {
@@ -23,5 +26,16 @@ namespace BGS.Task
         
         [SerializeField] private Player player;
         public Player Player => player;
+
+
+        private void Start()
+        {
+            wardrobe.OnOpenClose += b => {player.gameObject.SetActive(!b);}; 
+        }
+
+        private void OnDestroy()
+        {
+            wardrobe.OnOpenClose -= b => {player.gameObject.SetActive(!b);}; 
+        }
     }
 }

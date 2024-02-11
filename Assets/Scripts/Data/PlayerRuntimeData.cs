@@ -9,8 +9,6 @@ namespace BGS.Task
 
     public class PlayerRuntimeData : ScriptableObject
     {
-        public float Stamina;
-        
         public int Gold;
         
         public List<CharacterOutfitData> OutfitData = new();
@@ -27,7 +25,6 @@ namespace BGS.Task
 
         private void ResetData()
         {
-            Stamina = 0;
             Gold = 0;
             OutfitData.Clear();
             CurrentOutfit = null;

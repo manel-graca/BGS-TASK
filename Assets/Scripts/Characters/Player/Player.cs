@@ -7,6 +7,7 @@ namespace BGS.Task
     public class Player : Character
     {
         [SerializeField] protected PlayerRuntimeData runtimeData;
+        public PlayerRuntimeData RuntimeData => runtimeData;
     }
 }
 

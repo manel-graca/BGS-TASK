@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 60fe9bce-fb45-4fc1-83cf-7f30c4082d1e
   displayName: Potion of Charisma
+  description: A sparkling, red liquid in a small vial that boosts the drinker's
+    charm and persuasive power.
   type: 2
   icon: {fileID: 21300000, guid: db005d11213e5da47b9769c2e6c56eee, type: 3}
+  tradable: 1
   baseValue: 5
+  equippableInHotbar: 1
   sellRatio: 0.75
   demandFactor: 1
   supplyFactor: 1

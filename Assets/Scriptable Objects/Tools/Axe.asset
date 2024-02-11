@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: c7831390-829b-426b-9afc-10caa0516b2f
   displayName: Axe
+  description: A basic chopping tool with a wooden handle and a sharp, metal head
+    for cutting trees.
   type: 3
   icon: {fileID: 21300000, guid: 8708d80070522a043a1ab6a2b2775382, type: 3}
+  tradable: 1
   baseValue: 10
+  equippableInHotbar: 1
   sellRatio: 0.5
   demandFactor: 1.5
   supplyFactor: 2

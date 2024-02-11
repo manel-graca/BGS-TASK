@@ -1,30 +1,24 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace BGS.Task
 {
     public class PlayerClothing : Player
     {
-        [SerializeField] private Outfit currentOutfit;
-        
-        [SerializeField] private List<CharacterOutfitData> currentOutfitData = new();
+        [FormerlySerializedAs("currentOutfitData")] 
+        [SerializeField] private List<CharacterOutfitData> currentWardrobeData = new();
 
-        private void OnValidate()
-        {
-            foreach (var k in currentOutfitData)
-            {
-                if (k.defaultSprite == null && k.renderer.sprite != null)
-                {
-                    k.defaultSprite = k.renderer.sprite;
-                } 
-            }
-        }
+        private Outfit currentOutfit => RuntimeData.CurrentOutfit;
+        
 
         protected override void Start()
         {
             base.Start();
+            if(currentOutfit != null) ChangeOutfit(currentOutfit);
         }
         
         protected override void Update()
@@ -33,11 +27,25 @@ namespace BGS.Task
             UpdateRenderers();
         }
 
+        public void ChangeOutfit(Outfit outfit)
+        {
+            RuntimeData.CurrentOutfit = outfit;
+            UpdateRenderers();
+        }
+
         private void UpdateRenderers()
         {
-            foreach(var k in currentOutfitData)
+            if (currentOutfit != null)
             {
-                k.renderer.sprite = k.clothing == null ? k.defaultSprite : k.clothing.ClothingSprite;
+                foreach (var k in currentOutfit.Clothes)
+                {
+                    foreach (var j in currentWardrobeData.Where(j => k.bodyPart == j.bodyPart && k.clothing != null))
+                    {
+                        j.clothing = k.clothing;
+                        j.defaultSprite = k.clothing.ClothingSprite;
+                        j.renderer.sprite = k.clothing.ClothingSprite;
+                    }
+                }
             }
         }
     }

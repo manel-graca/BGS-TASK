@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f77f2eaa09aaa2a4bbcd4f06c2f9775c, type: 3}
+  m_Name: Outfit 1
+  m_EditorClassIdentifier: 
+  id: cca76d1a-c3e6-4bf4-a898-912d278c823a
+  displayName: Outfit 1
+  description: 
+  type: 1
+  icon: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+  tradable: 1
+  baseValue: 2
+  equippableInHotbar: 1
+  sellRatio: 0.75
+  demandFactor: 1
+  supplyFactor: 1
+  utilityFactor: 1
+  buyPrice: 2
+  sellPrice: 2
+  clothes:
+  - bodyPart: 1
+    clothing: {fileID: 11400000, guid: 21b6c552710bf864ea4049989a3eac97, type: 2}
+  - bodyPart: 2
+    clothing: {fileID: 11400000, guid: 764bde0cf1c91b94a9ac367ca349f9d5, type: 2}
+  - bodyPart: 3
+    clothing: {fileID: 11400000, guid: 449d9f649792c024787e588f5fc38ca7, type: 2}
+  - bodyPart: 4
+    clothing: {fileID: 11400000, guid: 8ef4a3b142f07a044838af2345caeb70, type: 2}
+  - bodyPart: 5
+    clothing: {fileID: 11400000, guid: ad297f102342bc94382b722a0447323b, type: 2}
+  - bodyPart: 6
+    clothing: {fileID: 11400000, guid: 1da4df7019cd29f45bcb57b3408b135a, type: 2}
+  - bodyPart: 7
+    clothing: {fileID: 11400000, guid: 064ed29a18e9fb44eafebb138dfc6aba, type: 2}
+  - bodyPart: 8
+    clothing: {fileID: 0}
+  - bodyPart: 9
+    clothing: {fileID: 11400000, guid: e7603dcb751290047847421fe43d064a, type: 2}
+  - bodyPart: 10
+    clothing: {fileID: 11400000, guid: cc74a2acfa44e574ca31655d16cfbc12, type: 2}
+  - bodyPart: 11
+    clothing: {fileID: 11400000, guid: b322a76e677ef1147968a6bc4c629e4c, type: 2}
+  - bodyPart: 12
+    clothing: {fileID: 0}
+  - bodyPart: 13
+    clothing: {fileID: 11400000, guid: 26e5018105205624fbfae3055590bc1e, type: 2}
+  - bodyPart: 14
+    clothing: {fileID: 11400000, guid: 314bcdccfb6271f4ab63ba64da8e8e5b, type: 2}
+  - bodyPart: 15
+    clothing: {fileID: 11400000, guid: fc7aa40f8c262ab4f86290e3c5bdb781, type: 2}
+  - bodyPart: 16
+    clothing: {fileID: 11400000, guid: a99b711f429e7304e8d8947dbb6f8a84, type: 2}
